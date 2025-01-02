@@ -9,9 +9,8 @@ class ScaffoldWidgetScreen extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             title: Text("App Title"),
-
           ),
-          body: Center(
+          body: const Center(
             child: Text(
               "Hello",
               style: TextStyle(fontSize: 30),
@@ -24,7 +23,7 @@ class ScaffoldWidgetScreen extends StatelessWidget {
 
           // Added BottomNavigationBar with at least 2 items
           bottomNavigationBar: BottomNavigationBar(
-            items: [
+            items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',
@@ -36,7 +35,9 @@ class ScaffoldWidgetScreen extends StatelessWidget {
             ],
           ),
           backgroundColor: Colors.grey,
-          drawer: Drawer(child: Text("Demo"),),
+          drawer: const Drawer(
+            child: Text("Demo"),
+          ),
         ));
   }
 }
